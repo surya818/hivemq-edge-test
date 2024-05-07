@@ -1,4 +1,4 @@
-# HiveMQEdgeTest
+# HiveMQ Edge Tests
 Test Automation framework to test Http Adapters of HiveMQ Edge
 
 **Tech Stack:**</br>
