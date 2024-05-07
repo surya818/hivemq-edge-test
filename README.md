@@ -30,6 +30,7 @@ junit </br>
 The tests focus on HiveMQ Edge, http adapters functionality. Http Adapters work by listening to a polling endpoint where data is coming from and convert the json input payload to mqtt format and publish the mqtt messages to a topic. </br>
 In a nutshell tests deal with creation, modification of adapters and within tests we assert the correct states of adapters as well as MQTT message translation done by the adapter. We have tests covering Create Adapters, List out adapters, Modify adapters as well as Delete adapters, basically all the CRUD operations that the rest api offers. And the tests are E2E Accpetance style tests integrating flows accross different operations of HiveMQ edge.
 </br> 
+And also to clarify, the tests are not just REST API tests, they are functional tests that utilize the RestAPI and in many tests, we verify the messages pub-sub mechanism for some time, hence few tests run for mmore than 5 seconds, because we wait and poll for the specified wait times. </br>
 For polling endpoint which generates data, I used a free (and apikey less) rest api service from the web, it's simple and lightweight. It's https://jsonplaceholder.typicode.com/
 
 **Test Plan** </br>
