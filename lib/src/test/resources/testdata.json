@@ -1,0 +1,7 @@
+{
+	"baseUrl":"http://localhost:8080",
+	"brokerUrl": "tcp://localhost:1883",
+	"username":"admin",
+	"password":"hivemq",
+	"topic": "test"
+}
