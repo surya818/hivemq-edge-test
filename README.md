@@ -6,6 +6,17 @@ Java version "21.0.3"</br>
 Gradle 8.7</br>
 HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) </br>
 
+****Prerequisites/Setup: ****
+Assumption: Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command </br>
+![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
+
+**Steps:**
+1. Clone this repo </br>
+2. Navigate to root directory of the repo </br>
+3. Run ./gradlew test -i </br>
+4. Verify Test results in lib\build\reports\tests\test\index.html </br>
+ 
+
 **Libraries used:**</br>
 Java HttpClient2</br>
 Paho eclipse Mqtt client</br>
