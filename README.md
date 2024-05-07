@@ -6,7 +6,7 @@ Java version "21.0.3"</br>
 Gradle 8.7</br>
 HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) </br>
 
-****Prerequisites/Setup: ****
+**Prerequisites/Setup:**
 Assumption: Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command </br>
 ![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
 
@@ -29,7 +29,7 @@ For polling endpoint, I used a free (and apikey less) rest api service from the 
 
 **Test Plan** </br>
 A sample test plan is attached (which consistsa subset of most critical tests ). 
-***The Test plan in no means a comprehensive test plan with all scenarios, its only a subset in the context of this assignment.
+***The Test plan in no means a comprehensive test plan with all scenarios, its only a subset to have a fair idea on how tests would look.
 
 **Sample Test Reports:** </br>
 </br>![image](https://github.com/surya818/HiveMQEdgeTest/assets/7116020/34376cc0-6dc0-4e8c-a16a-afa8f97b65b9)
