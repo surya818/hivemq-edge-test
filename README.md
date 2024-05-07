@@ -8,8 +8,9 @@ HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) <
 
 **Prerequisites/Setup:**
 **Assumptions**: 
-1. Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command below </br>
-2. Setup is successful and broker and the HIveMQ server are running on 8080
+1. Java is installed in the system
+2. Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command below </br>
+3. Setup is successful and broker and the HIveMQ server are running on 8080
 
 ![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
 
