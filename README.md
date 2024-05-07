@@ -16,7 +16,7 @@ HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) <
 **Steps:**
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
-3. Run ./gradlew test -i </br>
+3. Run **./gradlew test -i** </br>
 4. Verify Test results in lib\build\reports\tests\test\index.html </br>
  
 
