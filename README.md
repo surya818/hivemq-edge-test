@@ -4,22 +4,33 @@ Test Automation framework to test Http Adapters of HiveMQ Edge
 **Tech Stack:**</br>
 Java version "21.0.3"</br>
 Gradle 8.7</br>
-HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) </br>
+Docker HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) </br>
+The whole setup is containerized. The dockerfile has set up instructions for setting up both Java and HiveMQ
 
 **Prerequisites/Setup:**
-**Assumptions**: 
-1. Java is installed in the system
-2. Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command below </br>
+1. Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command below </br>
 3. Setup is successful and broker and the HIveMQ server are running on 8080
 
 ![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
 
-**Steps:**
+**How to Run : (Docker way )** 
+1. Clone this repo </br>
+2. Navigate to root directory of the repo </br>
+3. Build the docker image with command ==> **docker build -t hivemq-edge-tests:1.0 .** </br>
+4. Verify docker image is built successfully
+5. Run the docker image in a container, which will run the tests and save the test reports locally, in the host machine
+   **docker run -v <TESTOUTPUT_PATH>:/opt/hivemq/lib/build/reports hivemq-edge-tests:1.0 </br>**
+   Change the TESTOUTPUT_PATH to your desired location to save test results
+4. Verify Test results in your set location </br>
+ 
+
+**Steps: (Alternate way/ Non Docker )** 
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
 3. Run **./gradlew test -i** </br>
 4. Verify Test results in lib\build\reports\tests\test\index.html </br>
  
+
 
 **Libraries used:**</br>
 Java HttpClient2</br>
