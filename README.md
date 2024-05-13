@@ -18,7 +18,7 @@ The whole setup is containerized. The dockerfile has set up instructions for set
 2. Navigate to root directory of the repo </br>
 3. Build the docker image with command ==> **docker build -t hivemq-edge-tests:1.0 .** </br>
 4. Verify docker image is built successfully
-5. Run the docker image in a container, which will run the tests and save the test reports locally, in the host machine
+5. Run the docker image in a container, which will run the tests and save the test reports locally, in the host machine </br>
    **docker run -v <TESTOUTPUT_PATH>:/opt/hivemq/lib/build/reports hivemq-edge-tests:1.0 </br>**
    Change the TESTOUTPUT_PATH to your desired location to save test results
 4. Verify Test results in your set location </br>
