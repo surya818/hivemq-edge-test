@@ -4,16 +4,14 @@ Test Automation framework to test Http Adapters of HiveMQ Edge
 **Tech Stack:**</br>
 Java version "21.0.3"</br>
 Gradle 8.7</br>
-Docker HiveMQ Edge 2024.3 (Configured docker based HiveMQ setup, broker on localhost) </br>
-The whole setup is containerized. The dockerfile has set up instructions for setting up both Java and HiveMQ
+The whole setup is containerized. The dockerfile has everything needed for setting up both Java and HiveMQ and running tests </br>
 
 **Prerequisites/Setup:**
-1. Docker is installed on the local system. Using docker, setup the HiveMQ Edge locally, using the command below </br>
-3. Setup is successful and broker and the HIveMQ server are running on 8080
+1. Docker is installed on the local system </br>
 
 ![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
 
-**How to Run : (Docker way )** 
+**How to Run** 
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
 3. Build the docker image with command ==> **docker build -t hivemq-edge-tests:1.0 .** </br>
@@ -23,8 +21,14 @@ The whole setup is containerized. The dockerfile has set up instructions for set
    Change the TESTOUTPUT_PATH to your desired location to save test results
 4. Verify Test results in your set location </br>
  
+**What's happening behind the scenes:**
+The Dockerfile uses a openjdk base image, which has java pre-built. </br>
+Download the HiveMQ Edge software binary from official site, and run the HiveMQ Edge broker on configured port, via a dockerfile step</br>
+There is a script called runtests.sh, which is the entrypoint for the Dockerfile. This script verfies that broker is started successfully in the container and also fire the test execution using a gradle command </br> 
 
-**Steps: (Alternate way/ Non Docker )** 
+**How to Run: (Alternate way/ Non Docker )** 
+(If you want to just run the tests locally, without using Docker)
+Prerequisites: 
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
 3. Run **./gradlew test -i** </br>
