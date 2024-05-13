@@ -9,8 +9,6 @@ The whole setup is containerized. The dockerfile has everything needed for setti
 **Prerequisites/Setup:**
 1. Docker is installed on the local system </br>
 
-![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
-
 **How to Run** 
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
@@ -28,7 +26,12 @@ There is a script called runtests.sh, which is the entrypoint for the Dockerfile
 
 **How to Run: (Alternate way/ Non Docker )** 
 (If you want to just run the tests locally, without using Docker)
-Prerequisites: 
+Prerequisites: </br>
+1. Java, Gradle</br>
+2. HiveMQ setup locally using docker, use the below command </br>
+
+![image](https://github.com/surya818/hivemq-edge-test/assets/7116020/76044981-f450-40c2-9712-24bbe9350f40)</br>
+
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
 3. Run **./gradlew test -i** </br>
