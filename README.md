@@ -13,7 +13,7 @@ The whole setup is containerized. The dockerfile has everything needed for setti
 1. Clone this repo </br>
 2. Navigate to root directory of the repo </br>
 3. Build the docker image with command ==> **docker build -t hivemq-edge-tests:1.0 .** </br>
-4. Verify docker image is built successfully
+4. Verify docker image is built successfully using docker images command
 5. Run the docker image in a container, which will run the tests and save the test reports locally, in the host machine </br>
    **docker run -v <TESTOUTPUT_PATH>:/opt/hivemq/lib/build/reports hivemq-edge-tests:1.0 </br>**
    Change the TESTOUTPUT_PATH to your desired location to save test results
@@ -23,6 +23,7 @@ The whole setup is containerized. The dockerfile has everything needed for setti
 The Dockerfile uses a openjdk base image, which has java pre-built. </br>
 Download the HiveMQ Edge software binary from official site, and run the HiveMQ Edge broker on configured port, via a dockerfile step</br>
 There is a script called runtests.sh, which is the entrypoint for the Dockerfile. This script verfies that broker is started successfully in the container and also fire the test execution using a gradle command </br> 
+Our docker run command has a -v option, which creates a volume, and this is how we copy the test result reports to the host machine
 
 **How to Run: (Alternate way/ Non Docker )** 
 (If you want to just run the tests locally, without using Docker)
